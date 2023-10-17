@@ -9,6 +9,9 @@ app.use(cors());
 app.use(express.json());
 
 // application router
+app.get("/", (req, res) => {
+   res.send("CoffeeServer is running");
+});
 app.use("/coffee", router);
 
 // Server listen
